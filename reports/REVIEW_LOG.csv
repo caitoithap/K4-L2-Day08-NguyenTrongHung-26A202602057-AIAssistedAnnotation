@@ -1,0 +1,10 @@
+round,frame_id,object,action,rule_or_reason
+1,frame_0392.jpg,xe buýt lớn ở giữa-phải ảnh,deleted,Không phải class car; bbox đang nhận nhầm phương tiện lớn thành car
+1,frame_0392.jpg,xe buýt lớn ở phía phải ảnh,deleted,Không phải class car; bbox đang nhận nhầm phương tiện lớn thành car
+1,frame_0392.jpg,xe con bị cắt ở mép dưới bên trái,edited,Giữ object vì vẫn nhìn thấy đủ phần thân để xác định xe; bbox cần bám sát phần xe nhìn thấy và dừng ở mép ảnh
+1,frame_0392.jpg,xe con ở góc dưới gần chính giữa,edited,Thân xe nhìn thấy rõ nhưng bị tối; cần căn chỉnh bbox sao cho bao khép đúng thân xe mà không vượt mép ảnh
+1,frame_0392.jpg,xe con sát mép phải,edited,Object nằm sát biên ảnh nhưng vẫn nhận diện được là xe; cần chỉnh bbox theo thân xe và không bỏ sót
+1,frame_0392.jpg,xe con ở vùng tối phía dưới trái,added,Model bỏ sót xe rõ ràng bên mép trái; đây là case khó do nền tối và bị che một phần nên cần thêm box thủ công
+1,frame_0182.jpg,xe con ở làn giữa ảnh,added,Model không phát hiện xe rõ ràng ở vùng bị che một phần; thêm box để tăng recall cho xe nhỏ/giữa
+1,frame_0369.jpg,xe con ở mép trái,edited,Model vẽ bbox quá rộng và lệch; cần dồn bbox sát thân xe và loại phần lẫn vào xe lân cận
+1,frame_0331.jpg,xe con ở phía dưới ảnh,accepted,Box ban đầu đã gần đúng với thân xe; giữ nguyên để tránh sửa thừa khi object đã rõ ràng
